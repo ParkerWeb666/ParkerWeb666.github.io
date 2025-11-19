@@ -7,28 +7,162 @@
     <link rel="icon" href="./assets/img/icons/cat.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header>
-      <nav class="menu">
-        <a href="#home"><img src="./assets/img/menu/home.svg" alt="" /></a>
-        <a href="#skills"><img src="./assets/img/menu/skills.svg" alt="" /></a>
-        <a href="#projects"><img src="./assets/img/menu/projects.svg" alt=""/></a>
-        <a href="#footer"><img src="./assets/img/menu/contacts.svg" alt=""/></a>
-      </nav>
-      <div class="settings">
-        <a href=""><img src="./assets/img/settings/download.svg" alt="" /></a>
-        <a href=""><img src="./assets/img/settings/language.svg" alt="" /></a>
-        <a href=""><img src="./assets/img/settings/lightmode.svg" alt="" /></a>
+    <canvas id="particles-canvas"></canvas>
+    <div class="scroll-progress-bar">
+      <div class="scroll-progress-fill"></div>
+    </div>
+    <div class="container">
+      <header>
+        <nav class="menu">
+          <a href="#home"><img src="./assets/img/menu/home.svg" alt="" /></a>
+          <a href="#skills"
+            ><img src="./assets/img/menu/skills.svg" alt=""
+          /></a>
+          <a href="#projects"
+            ><img src="./assets/img/menu/projects.svg" alt=""
+          /></a>
+          <a href="#footer"
+            ><img src="./assets/img/menu/contacts.svg" alt=""
+          /></a>
+          <div class="bubble"></div>
+        </nav>
+        <div class="settings">
+          <a href="./assets/Resume.pdf" download="Resume.pdf"
+            ><img src="./assets/img/settings/download white.png" alt=""
+          /></a>
+          <a href=""
+            ><img src="./assets/img/settings/language white.png" alt=""
+          /></a>
+          <a id="themeToggle" href=""
+            ><img src="./assets/img/settings/lightmode white.png" alt=""
+          /></a>
+        </div>
+      </header>
+      <div class="home" id="home">
+        <div class="left">
+          <h1>Frontend<br /><b>developer</b></h1>
+          <p>
+            HI! I’m Ivan Belov, a beginner frontend developer eager to learn and
+            grow in web development. I’m passionate about building clean and
+            responsive user interfaces and improving my skills every day.
+          </p>
+
+          <button>Hire me</button>
+        </div>
+        <div class="right">
+          <div class="cat">
+            <img src="./assets/img/cat_head.png" alt="" class="cat_head" />
+            <img src="./assets/img/cat_body.png" alt="" class="cat_body" />
+          </div>
+        </div>
       </div>
-    </header>
-
-    <div class="home"></div>
-
-    <div class="skills"></div>
-
-    <div class="projects"></div>
-
-    <footer class="footer"></footer>
-
+      <div class="arrow_down">
+        <img src="./assets/img/arrow_down.png" alt="" />
+      </div>
+      <div class="skills" id="skills">
+        <h2>My <b>skills</b></h2>
+        <div class="skill_category">
+          <h3>FRONTEND</h3>
+          <div class="skill_list">
+            <div class="skill_item">
+              <img src="./assets/img/skills/front/js.png" alt="" />
+              <p>Javascript</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/front/html-5.png" alt="" />
+              <p>HTML5</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/front/css-3.png" alt="" />
+              <p>CSS3</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/front/react.png" alt="" />
+              <p>React</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill_category">
+          <h3>BACKEND</h3>
+          <div class="skill_list">
+            <div class="skill_item">
+              <img src="./assets/img/skills/back/mysql-database.png" alt="" />
+              <p>MySQL</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/back/php.png" alt="" />
+              <p>PHP</p>
+            </div>
+          </div>
+        </div>
+        <div class="skill_category">
+          <h3>TOOLS</h3>
+          <div class="skill_list">
+            <div class="skill_item">
+              <img
+                src="./assets/img/skills/tools/visual-studio-code-1 1.png"
+                alt=""
+              />
+              <p>VS Code</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/tools/figma.png" alt="" />
+              <p>Figma</p>
+            </div>
+            <div class="skill_item">
+              <img src="./assets/img/skills/tools/photoshop.png" alt="" />
+              <p>Photoshop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projects" id="projects">
+        <div class="project_title">
+          <h2>Projects</h2>
+        </div>
+        <div class="project_content">
+          <div class="project_list">
+            <p>Messenger</p>
+            <p>Weather</p>
+            <p>Mini Games</p>
+            <p>Subscription calculator</p>
+            <p>Notes</p>
+          </div>
+          <div class="project_preview">
+            <img
+              class="project_image"
+              src="./assets/img/projects/1.jpg"
+              alt=""
+            />
+            <!-- <img src="./assets/img/projects/2.jpg" alt="">
+            <img src="./assets/img/projects/3.jpg" alt="">
+            <img src="./assets/img/projects/4.jpg" alt="">
+            <img src="./assets/img/projects/5.jpg" alt=""> -->
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <p>Contact me</p>
+        <a href="mailto:ivbelovvv@gmail.com">ivbelovvv@gmail.com</a>
+        <nav class="messengers">
+          <a href="https://telegram.org"
+            ><img src="./assets/img/messergers/tg white.png" alt=""
+          /></a>
+          <a href="https://instagram.com"
+            ><img src="./assets/img/messergers/inst white.png" alt=""
+          /></a>
+          <a href="https://whatsapp.com"
+            ><img src="./assets/img/messergers/whatsapp white.png" alt=""
+          /></a>
+          <a href="https://github.com"
+            ><img src="./assets/img/messergers/github white.png" alt=""
+          /></a>
+        </nav>
+        <a class="dev">built by PARKER &lt;3</a>
+      </footer>
+    </div>
   </body>
+  <script src="./script.js"></script>
 </html>
