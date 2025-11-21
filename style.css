@@ -170,6 +170,22 @@ header {
   height: 80vh;
 }
 
+.element-animation {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateX(0%);
+}
+
+.element-animation.element-show p {
+  color: #111;
+}
+
+
 .home h1 {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 100px;
@@ -193,18 +209,21 @@ header {
   background-color: #fff;
   color: #763EC5;
   font-size: 24px;
-  /* font-weight: 400; */
   border-radius: 10px;
   border: none;
   cursor: pointer;
   margin: 0 30px;
   font-family: "Montserrat Alternates", sans-serif;
+  transition: 
+    transform 0.3s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .home button:hover {
   background-color: #763EC5;
   color: #fff;
-  transition: background-color 0.2s, color 0.2s;
+  transform: scale(1.1);
 }
 
 .left {
@@ -349,6 +368,12 @@ footer a {
   text-decoration: none;
   font-size: 30px;
   color: #fff;
+}
+
+.messengers {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .messengers img {

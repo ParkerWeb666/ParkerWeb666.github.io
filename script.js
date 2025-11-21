@@ -158,10 +158,27 @@ animate();
 // DARK MODE
 const toggleBtn = document.getElementById("themeToggle");
 toggleBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // Отменяем переход по ссылке
+  e.preventDefault();
   document.documentElement.classList.toggle("dark");
 });
 document.getElementById("themeToggle").addEventListener("click", (e) => {
   e.preventDefault();
   document.body.classList.toggle("dark");
 });
+
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+     change.target.classList.add('element-show');
+    }
+  });
+}
+
+let options = {
+  threshold: [0.5] };
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
