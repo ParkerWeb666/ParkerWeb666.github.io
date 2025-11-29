@@ -13,10 +13,20 @@
     <div class="scroll-progress-bar">
       <div class="scroll-progress-fill"></div>
     </div>
+    <form action="#">
+      <button class="go-home"><img src="./assets/img/arrow_up.png" alt=""></button>
+    </form>
+    
     <div class="container">
       <header>
+        <!-- <audio contols autoplay>
+            <source src="/assets/audio/123.mp3" type="audio/mpeg" />
+            Ваш браузер не поддерживает элемент audio.
+          </audio> -->
         <nav class="menu">
-          <a href="#home"><img src="./assets/img/menu/home.svg" alt="" /></a>
+          <a href="#" class="active">
+            <img src="./assets/img/menu/home.svg" alt=""
+          /></a>
           <a href="#skills"
             ><img src="./assets/img/menu/skills.svg" alt=""
           /></a>
@@ -29,19 +39,15 @@
           <div class="bubble"></div>
         </nav>
         <div class="settings">
-          <a href="./assets/Resume.pdf" download="Resume.pdf"
+          <a href="./assets/Resume Frontend.pdf.pdf" download="Resume Frontend.pdf" data-tooltip
             ><img src="./assets/img/settings/download white.png" alt=""
           /></a>
           <a href=""
             ><img src="./assets/img/settings/language white.png" alt=""
           /></a>
-          <a id="themeToggle" href=""
+          <a id="themeToggle" href="" data-tooltip
             ><img src="./assets/img/settings/lightmode white.png" alt=""
           /></a>
-          <audio contols autoplay>
-            <source src="/assets/audio/123.mp3" type="audio/mpeg" />
-            Ваш браузер не поддерживает элемент audio.
-          </audio>
         </div>
       </header>
       <div class="home" id="home">
@@ -49,11 +55,18 @@
           <h1 class="element-animation">Frontend<br /><b>developer</b></h1>
           <p class="element-animation">
             HI! I’m Ivan Belov, a beginner frontend developer eager to learn and
-            grow in web development. I’m passionate about building clean and
+            grow in web development. I’m passionate abou building clean and
             responsive user interfaces and improving my skills every day.
           </p>
+          <form action="#footer">
+            <button class="open-modal-btn">Hire me</button>
+          </form>
 
-          <button>Hire me</button>
+          <!-- <div class="popup-overlay"></div>
+          <div class="popup">
+            <button class="js-close-popup popup-close">×</button>
+            Контент попапа здесь апр апр апрапр ап р апрапрпра
+          </div> -->
         </div>
         <div class="right">
           <div class="cat">
@@ -105,12 +118,17 @@
           <h3>TOOLS</h3>
           <div class="skill_list">
             <div class="skill_item">
+              <img src="./assets/img/skills/tools/git.png" alt="" />
+              <p>Git</p>
+            </div>
+            <div class="skill_item">
               <img
                 src="./assets/img/skills/tools/visual-studio-code-1 1.png"
                 alt=""
               />
               <p>VS Code</p>
             </div>
+
             <div class="skill_item">
               <img src="./assets/img/skills/tools/figma.png" alt="" />
               <p>Figma</p>
@@ -128,7 +146,7 @@
         </div>
         <div class="project_content">
           <div class="project_list">
-            <p>Messenger</p>
+            <p>Fixtech</p>
             <p>Weather</p>
             <p>Mini Games</p>
             <p>Subscription calculator</p>
@@ -137,7 +155,7 @@
           <div class="project_preview">
             <img
               class="project_image"
-              src="./assets/img/projects/1.jpg"
+              src="./assets/img/projects/fixtech.png"
               alt=""
             />
             <!-- <img src="./assets/img/projects/2.jpg" alt="">
@@ -167,7 +185,7 @@
         <a class="dev">create by PARKER &lt;3</a>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
   </body>
-  <script src="./script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </html>

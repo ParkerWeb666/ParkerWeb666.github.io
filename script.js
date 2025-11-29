@@ -87,6 +87,17 @@ window.addEventListener("scroll", updateScrollProgress);
 window.addEventListener("resize", updateScrollProgress);
 updateScrollProgress();
 
+const goHomeButton = document.querySelector(".go-home");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    goHomeButton.classList.add("visible");
+  } else {
+    goHomeButton.classList.remove("visible");
+  }
+});
+
+
 // MENU
 
 const sections = ["home", "skills", "projects", "footer"];
@@ -109,8 +120,12 @@ function updateBubblePosition() {
       }
     }
   });
-
+links.forEach(link => link.classList.remove("active"));
   const activeLink = links[currentIndex];
+  if (activeLink) {
+    activeLink.classList.add("active");
+  }
+  
   if (activeLink) {
     const linkRect = activeLink.getBoundingClientRect();
     const menuRect = menu.getBoundingClientRect();
@@ -125,11 +140,14 @@ window.addEventListener("load", updateBubblePosition);
 window.addEventListener("resize", updateBubblePosition);
 
 // CAT
+let popupOpen = false;
 const element = document.querySelector(".cat_head");
 let currentAngle = 0;
 let targetAngle = 0;
 
 document.addEventListener("mousemove", (e) => {
+  if (popupOpen) return;
+  if (popupOpen) targetAngle = 0;
   const rect = element.getBoundingClientRect();
   const centerX = rect.left + rect.width / 2;
   const centerY = rect.top + rect.height / 2;
@@ -182,3 +200,30 @@ let elements = document.querySelectorAll('.element-animation');
 for (let elm of elements) {
   observer.observe(elm);
 }
+
+//Hire me popup
+
+// $(function () {
+
+//   function openPopup() {
+//     $('.popup-overlay').fadeIn(200);
+//     $('.popup').fadeIn(200);
+//     $('body').addClass('no-scroll');
+//     popupOpen = true;
+//   }
+
+//   function closePopup() {
+//     $('.popup-overlay').fadeOut(200);
+//     $('.popup').fadeOut(200);
+//     $('body').removeClass('no-scroll');
+//     popupOpen = false;
+//   }
+
+//   $('.open-modal-btn').on('click', openPopup);
+//   $('.js-close-popup, .popup-overlay').on('click', closePopup);
+
+//   $(document).on('keyup', function(e) {
+//     if (e.key === "Escape") closePopup();
+//   });
+
+// });
